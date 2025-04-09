@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* --------------------------------HEADER---------------------------- */
+/* Header styling */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: orange;
+}
+
+/* Navbar link styling */
+.navbar a {
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
+}
+
+/* Navbar unordered list styling */
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Navbar unordered list list-item styling */
+.navbar ul li {
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+/* Logo styling */
+.site-logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px teal;
+}
+
+
+/* -----------------------------HOME ------------------------------ */
+#bannerimage {
+    width: 100%;
+    background-image: url(data:image/png;base64,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);
+    height: 150px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
+}
+
+#bannerimage p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+
+.about {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 25px;
+    color: teal;
+    font-weight: bold;
+    border: orange 5px double;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+.about img {
+    max-width: 500px;
+    max-height: 280px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.about h2 {
+    text-shadow: 1px 1px orange;
+}
+
+/* Events class styling (this is a container for the events) */
+.index-events {
+    margin-top: 20px;
+    padding: 40px 20px;
+    border-radius: 25px;
+    color: teal;
+}
+
+/* Individual event styling */
+.index-event {
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: orange 5px double;
+    max-width: 300px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.index-events h2 {
+    text-shadow: 1px 1px orange;
+}
+
+/* Individual event image styling */
+.index-event img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Flexbox approach for events styling */
+.index-event-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* -----------------------------EVENTS------------------------------ */
+
+/* Events class styling (this is a container for the events) */
+.events {
+    margin-top: 20px;
+    padding: 40px 20px;
+    border-radius: 25px;
+    color: teal;
+}
+
+/* Individual event styling */
+.event {
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: orange 5px double;
+    max-width: 500px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.events h2 {
+    text-shadow: 1px 1px orange;
+    text-align: center;
+}
+
+.events h3 {
+    font-size: 1.4rem;
+    line-height: 0.5;
+}
+
+.events h4 {
+    font-size: 1.2rem;
+    line-height: 0.5;
+}
+
+.events h5 {
+    font-size: 1.0rem;
+    line-height: 0.5;
+}
+
+/* Individual event image styling */
+.event img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Flexbox approach for events styling */
+.event-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* -----------------------------MENU------------------------------ */
+
+
+/* Menu class styling (this is a container for the menu categories) */
+.menu {
+    margin: 20px;
+    padding: 40px 20px;
+    border-radius: 25px;
+    color: teal;
+}
+
+.menu h2 {
+    text-shadow: 1px 1px orange;
+    text-align: center;
+    margin-bottom: 75px;
+    background-color: teal;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    border: orange 5px double;
+}
+
+/* Individual category styling */
+.category {
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: orange 5px double;
+    max-width: 300px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.category h3 {
+    text-decoration: underline;
+}
+
+/* Individual menu category image styling */
+.category td img {
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.category tr:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Flexbox approach for events styling */
+.menu-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* -----------------------------LOCATION------------------------------ */
+
+.location-section {
+    text-align: center;
+    padding: 20px 20px;
+    color: teal;
+    font-weight: bold;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: orange 5px double;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.location h2 {
+    text-shadow: 1px 1px orange;
+}
+
+.location p {
+    font-weight: normal;
+}
+
+.hours td {
+    font-weight: normal;
+} 
+
+
+
+/* -----------------------------CONTACT------------------------------ */
+
+.contact {
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: teal;
+    text-shadow: 1px 1px orange;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 25px;
+    color: teal;
+    margin: 20px;
+    border: teal 5px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    border-radius: 12px;
+    padding: 12px;
+    background-color: teal;
+    border-width: 6px;
+    border-color: white;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .button:hover {
+        background-color: white;
+        border-color: teal;
+        color: teal;
+    }
+
+
+/* -----------------------------FOOTER------------------------------ */
+
+/* Footer styling */
+footer {
+    background: teal;
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+}

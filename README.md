@@ -1,0 +1,3 @@
+Event Center Website Project
+
+This is a website for a Sports Event Center created with HTML and CSS styling. The website contains a home page, events page, contact page, location page and a menu. There is a navigation bar at the top of the page to access these pages at anytime. The home page has an About Us section and a section for upcoming events. The events page has more detail on the upcoming events. There is a contact form where you can submit your first name, last name, email and a text box for a message / inquiry. The location page has an embedded Google map image, address, nearby destinations and the hours of operation. The menu page is split into three categories. The items on the menu enlarge when hovered to help with visibility. 
